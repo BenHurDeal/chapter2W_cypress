@@ -43,6 +43,5 @@ npm run cy:run  (Para rodar a suíte de testes em modo Headless)
 ## <h3>✒️ Autores
 * **QA Automation** - *Trabalho início ao fim* - [Ben-Hur](https://github.com/BenHurDeal)
 
-
 ## 📄 Licença
 Este projeto está sob a licença (ISC)
