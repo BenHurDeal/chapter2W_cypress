@@ -2,18 +2,18 @@
 
 Projeto criado com o intuito de treinamento para automação de testes
 
-## 🚀 Começando
+## <h3> 🚀 Começando
 
 Os tópicos abaixo vão te mostrar como utilizar o projeto e executar
 
-### 📋 Pré-requisitos
+### <h3> 📋 Pré-requisitos
 ```
 git
 node.js
 vscode
 ```
 
-### 🔧 Instalação
+### <h3> 🔧 Instalação
 
 Siga as etapas para instalar corretamente
 
