@@ -25,15 +25,15 @@ npm install
 ```
 
 ## <h3> ⚙️ Executando os testes
-```
+
 npm scripts
+
+```
+npm run cy:open (Para rodar a suíte de testes no modo interativo)
 ```
 
-no terminal do projeto execute:
 ```
-**npm run cy:open** Para rodar a suíte de testes no modo interativo
-ou
-**npm run cy:run**  Para rodar a suíte de testes em modo Headless
+npm run cy:run  (Para rodar a suíte de testes em modo Headless)
 ```
 
 ## <h3> 🛠️ Construído com
