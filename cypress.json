@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://todomvc.com/examples/react/#/",
+
+    "viewportWidth": 1200,
+    "viewportHeight": 720   
+}
