@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import faker from 'faker-br';
+import generatingTodo from '../shared/functions';
 
 describe('Interação com TODO', () => {
     before('valida que localstorage está null', () => {
@@ -12,37 +12,54 @@ describe('Interação com TODO', () => {
     beforeEach(() => {
         cy.visit('/');
     });
-    const generatingTodo = () => { return `${faker.lorem.word(3) + ' ' + faker.lorem.slug()}` };
-    
+
     it('Criar todo', () => {
         let nameTodo = generatingTodo();
         cy.get('input[class="new-todo"]').type(`${nameTodo}{enter}`);
         cy.get('ul[class="todo-list"]').should('exist').within(() => {
-            cy.get('li > div > label').should('contain.text', nameTodo);
+            cy.contains('li > div > label', nameTodo).should('be.visible');
         });
     });
 
     it('Criar vários todos', () => {
-        Cypress._.times(8, () => {
-            cy.get('input[class="new-todo"]').type(`${generatingTodo()}` + `{enter}`);
-        });
-        cy.get('ul[class="todo-list"]').should('exist').within(() => {
-            cy.get('li').should('have.length', 8);
+        cy.createTodos();
+        cy.get('@arrayTodos').then((arrayTodos) => {
+
+            cy.get('ul[class="todo-list"]').should('exist').within(() => {
+                cy.get('li').should('have.length', 3);
+                let textItemsTodos = [];
+
+                cy.get('li').each((liElement) => {
+                    textItemsTodos.push(liElement[0].innerText);
+                }).then(() => {
+                    expect(arrayTodos).to.deep.equal(textItemsTodos);
+                })
+            });
         });
     });
 
-    it.only('Editar todo', () => {
+    it('Editar todo', () => {
         let nameTodoEdit = generatingTodo();
-        cy.get('input[class="new-todo"]').type(`${nameTodoEdit}{enter}`);
-        cy.contains('label', nameTodoEdit);
+        cy.get('input[class="new-todo"]').as('inputTodo')
+            .type(`${nameTodoEdit}{enter}`);
+
+        cy.contains('label', nameTodoEdit)
+            .dblclick();
+
+        cy.get(`input[value="${nameTodoEdit}"]`).clear()
+            .type('TODO EDITADO - 123{enter}');
+
+        cy.get(`label`).should('have.text', 'TODO EDITADO - 123');
     });
 
     it('Remover todo', () => {
+        cy.createTodos();
 
-    });
-
-    it('Criar todo', () => {
-
+        cy.get('ul[class="todo-list"] > li').should('have.length', 3);
+        cy.get('li > div').eq(0).within(() => {
+            cy.get('button[class="destroy"]').click({force:true});
+        })
+        cy.get('ul[class="todo-list"] > li').should('have.length', 2)
     });
 
 });
