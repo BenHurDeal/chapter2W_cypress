@@ -20,7 +20,8 @@ Siga as etapas para instalar corretamente
 git clone 'aqui a rota https do repositório'
 ```
 
-**npm install**
+```
+npm install
 ```
 
 ## <h3> ⚙️ Executando os testes
