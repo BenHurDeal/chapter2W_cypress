@@ -39,8 +39,8 @@ ou
 ```
 
 ## <h3> 🛠️ Construído com
-* [Cypress](http://www.dropwizard.io/1.0.2/docs/) - O framework de testes
-* [Faker BR](https://maven.apache.org/) - Geração de dados fakes
+* [Cypress](https://docs.cypress.io/) - O framework de testes
+* [Faker BR](https://www.npmjs.com/package/faker-br) - Geração de dados fakes
 
 ## <h3>✒️ Autores
 * **QA Automation** - *Trabalho início ao fim* - [Ben-Hur](https://github.com/BenHurDeal)
