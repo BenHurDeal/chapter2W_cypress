@@ -17,12 +17,10 @@ vscode
 Siga as etapas para instalar corretamente
 
 ```
-em um path faça: git clone 'aqui a rota https do repositório'
+git clone 'aqui a rota https do repositório'
 ```
-no terminal do projeto execute:
+
 **npm install**
-```
-Aguarde até finalizar
 ```
 
 ## <h3> ⚙️ Executando os testes
