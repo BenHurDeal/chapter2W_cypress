@@ -4,7 +4,7 @@ Projeto criado com o intuito de treinamento para automação de testes
 ```
 Aplicação utilizada para teste: https://todomvc.com/examples/react/#/
 ```
-Funcionalidades abordadas
+## <h3> 📃 Funcionalidades abordadas
 ```
 Criar todo
 Criar vários todos
