@@ -1,6 +1,16 @@
 # <h3> chapter2W_cypress
 
 Projeto criado com o intuito de treinamento para automação de testes
+
+Aplicação utilizada para teste: https://todomvc.com/examples/react/#/
+Funcionalidades abordadas
+```
+Criar todo
+Criar vários todos
+Editar todo
+Remover todo
+```
+
 ## <h3> 🚀 Começando
 
 Os tópicos abaixo vão te mostrar como instalar o projeto e executar
