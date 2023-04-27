@@ -3,7 +3,7 @@
 Projeto criado com o intuito de treinamento para automação de testes
 ## <h3> 🚀 Começando
 
-Os tópicos abaixo vão te mostrar como utilizar o projeto e executar
+Os tópicos abaixo vão te mostrar como instalar o projeto e executar
 
 ### <h3> 📋 Pré-requisitos
 ```
